@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/main.js"></script>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/main.css}"></link>
+</head>
+<body>
+<div>
+
+    <p><span>创建的头像</span></p>
+    <form action="/users/userHeadCreate" method="post" enctype="multipart/form-data">
+        <p><input type="file" name="userHead" id="userHead" placeholder="请选择你的头像"/></p>
+        <p>
+            <button>创建头像</button>
+        </p>
+    </form>
+</div>
+</body>
+</html>

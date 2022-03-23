@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><span>主页面</span></p>
+<p>
+    <a th:href="@{/from/users/userStyle.html}" ><span th:text="${session.users.userName}"></span></a>
+    <span th:text="${session.users.userDescribe}"></span>
+</p>
+<ul>
+    <li><a th:href="@{/from/users/head.html}">头像</a></li>
+    <li><a th:href="@{/from/users/updateUserName.html}">修改用户名</a></li>
+    <li><a th:href="@{/from/users/updatePassword.html}">修改密码</a></li>
+    <li><a th:href="@{/from/users/updateDescribe.html}">修改签名</a></li>
+
+</ul>
+</body>
+</html>

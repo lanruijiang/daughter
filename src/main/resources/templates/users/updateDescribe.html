@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/main.js"></script>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/main.css}"></link>
+</head>
+<body>
+<div>
+
+    <p><span>修改你的账户</span></p>
+    <form action="/users/userUpdate" method="post">
+            <textarea name="userDescribe" id="userDescribe" th:text="${session.users.userDescribe}"></textarea>
+        </p>
+        <p>
+            <button>更换签名</button>
+        </p>
+    </form>
+</div>
+</body>
+</html>

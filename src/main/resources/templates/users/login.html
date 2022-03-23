@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/main.js"></script>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/main.css}"></link>
+</head>
+<body>
+<div>
+
+    <p><span>登录你的账户</span></p>
+    <form action="/users/userLogin" method="post">
+        <p><input type="text" name="userEmail" id="userEmail" placeholder="请输入电子邮件"/></p>
+        <p><input type="text" name="userPassword" id="userPassword" placeholder="请输入密码"/></p>
+        <p>
+            <button>登录账户</button>
+        </p>
+    </form>
+</div>
+</body>
+</html>

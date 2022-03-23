@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/main.js"></script>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/main.css}"></link>
+</head>
+<body>
+<div>
+
+    <p><span>创建你的账户</span></p>
+    <form action="/users/userRegist" method="post">
+        <p><input type="text" name="userName" id="userName" placeholder="请输入用户名"/></p>
+        <p><input type="text" name="userEmail" id="userEmail" placeholder="请输入电子邮件（登录用）"/></p>
+        <p><input type="text" name="userPassword" id="userPassword" placeholder="请输入密码"/></p>
+        <p><input type="text" name="userPasswordVersion" id="userPasswordVersion" placeholder="请确认密码"/></p>
+        <p>
+            <textarea name="userDescribe" id="userDescribe">请输入你的签名，让大家更了解你</textarea>
+        </p>
+        <p>
+            <button>创建账户</button>
+        </p>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:src="@{/js/wangEditor.min.js}"></script>
+    <script th:src="@{/js/jquery-3.2.1.min.js}"></script>
+</head>
+<body>
+
+
+<form>
+    <p>
+        <input type="text" name="articleTitle" id="articleTitle"/>
+    </p>
+    <p>
+        <textarea name="articleDesc" id="articleDescribe"></textarea>
+    </p>
+    <div id="div1" style="width: 80%;"></div>
+
+</form>
+</script>
+<script type="text/javascript">
+    const E = window.wangEditor
+    const editor = new E("#div1");
+    editor.config.uploadFileName = 'file';
+    editor.config.uploadImgServer = '/issue/upload-img';
+    editor.config.onchange  =function (data){
+        $("#articleDescribe").val(data);
+    }
+    editor.create();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>这是你的名片</p>
+<p><img th:src="${'/images/'+session.users.userHead}"></img></p>
+<p><span th:text="${session.users.userName}"></span></p>
+<p><span th:text="${session.users.userEmail}"></span></p>
+<p><span th:text="${session.users.userDescribe}"></span></p>
+<p><a th:href="@{/from/main/index}">返回主页</a></p>
+</body>
+</html>
